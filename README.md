@@ -29,6 +29,8 @@ The config can be manually downloaded as a `.zip` using the `download zip` butto
 
 Config should be placed in these folders
 
+Make sure the config is not in a folder (eg: `sane`) inside the config folder
+
 ### On Windows:
 * Old: `%appdata%\Teeworlds`
 * New: `%appdata%\DDNet`
