@@ -1,0 +1,14 @@
+ddnet-cache*
+*.log
+communityicons
+ddnet-info.json
+ddnet-server.sqlite
+editor
+downloaded*
+dumps
+demos
+ghosts
+screenshots
+teehistorian
+videos
+maps
