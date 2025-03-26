@@ -17,3 +17,5 @@ autoexec_server.cfg
 ddnet-saves.txt
 audio
 *.secret.cfg
+*.sqlite-shm
+*.sqlite-wal
