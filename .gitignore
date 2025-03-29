@@ -1,10 +1,5 @@
-ddnet-cache*
-*.log
 communityicons
-ddnet-info.json
-ddnet-server.sqlite
 editor
-downloaded*
 dumps
 demos
 ghosts
@@ -12,3 +7,16 @@ screenshots
 teehistorian
 videos
 maps
+autoexec_server.cfg
+ddnet-saves.txt
+audio
+cactus_binds.cfg
+downloaded*
+*-cache*
+*-info.json
+*.sqlite*
+*.log
+*.tmp
+*.secret.cfg
+*.sqlite-shm
+*.sqlite-wal
