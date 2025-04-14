@@ -11,6 +11,7 @@ autoexec_server.cfg
 ddnet-saves.txt
 audio
 cactus_binds.cfg
+bgdraw
 downloaded*
 *-cache*
 *-info.json
