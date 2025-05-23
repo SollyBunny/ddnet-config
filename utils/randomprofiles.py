@@ -17,7 +17,7 @@ def name():
 
 def clan():
 	if random.random() < 0.5:
-		return ""
+		return " "
 	return name()
 
 
