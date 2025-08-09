@@ -18,7 +18,7 @@ downloaded*
 *.sqlite*
 *.log
 *.tmp
-*.secret.cfg
+*secret*
 *.sqlite-shm
 *.sqlite-wal
 tclient_profiles.cfg
