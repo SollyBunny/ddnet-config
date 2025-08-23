@@ -13,7 +13,7 @@ These settings are designed for [Supported Clients](#supported-clients), but oth
 ## Supported clients
 
 This can be used with any client but here are the ones this is designed for
-1. [DDNet](https://github.com/ddnet/ddnet/)
+1. ~~[DDNet](https://github.com/ddnet/ddnet/)~~
 2. [TClient](https://github.com/sjrc6/TaterClient-ddnet)
 3. [SollyClient](https://github.com/sollybunny/ddnet) (must be self compiled)
 
