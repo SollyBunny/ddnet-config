@@ -7,7 +7,8 @@ screenshots
 teehistorian
 videos
 maps
-autoexec_*.cfg
+autoexec_client.cfg
+autoexec_server.cfg
 ddnet-saves.txt
 audio
 cactus_binds.cfg
