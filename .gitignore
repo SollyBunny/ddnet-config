@@ -23,3 +23,4 @@ downloaded*
 *.sqlite-shm
 *.sqlite-wal
 tclient_profiles.cfg
+censored_words*.json
