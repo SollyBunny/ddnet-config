@@ -49,11 +49,32 @@ def parse_duration(str) {
 	return to_int(duration) * mult
 }
 
+var args_parsed = args
+var what_sub = ""
+var args_sub = ""
+var id_sub = ""
+re.match(re.compile("^idlast (.+?) (.+? )?(\\d+)$"), args, false, fun[what_sub, args_sub, id_sub](str, match, group) {
+	if (group == 1) {
+		what_sub = str
+	} else if (group == 2) {
+		args_sub = str
+	} else if (group == 3) {
+		id_sub = str
+	}
+})
+print(args)
+if (what_sub != "" && id_sub != "") {
+	print(what_sub)
+	print(args_sub)
+	print(id_sub)
+	args_parsed = join([what_sub, " ", id_sub, " ", args_sub])
+}
+
 var what = ""
 var id_raw = ""
 var duration = ""
 var reason = ""
-re.match(re.compile("^(.+?) +(\\d+?)(?: +|$)(.*?)(?: +|$)(.+?)? *$"), args, false, fun[what, id_raw, duration, reason](str, match, group) {
+re.match(re.compile("^(.+?) +(\\d+?)(?: +|$)(.*?)(?: +|$)(.+?)? *$"), args_parsed, false, fun[what, id_raw, duration, reason](str, match, group) {
 	if (group == 1) {
 		what = str
 	} else if (group == 2) {
