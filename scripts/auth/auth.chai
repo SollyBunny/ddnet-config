@@ -1,3 +1,10 @@
+// scripts/auth/auth.chai
+// `tc_execute_on_connect chai scripts/auth/auth.chai`
+// `tc_execute_on_join chai scripts/auth/auth.chai`
+// `bind l chai scripts/auth/auth.chai`
+// place authentication in scripts/auth/<community>.secret.cfg
+// you can put passwords here aswell (for joining or mod slot)
+
 var community = state("community")
 
 exec("password \"\"")
@@ -42,7 +49,7 @@ if (community == "ddnet") {
 	} else {
 		auth("ddnet");
 	}
-} else if (community) {
+} else if (community != "") {
 	auth(community)
 } else {
 	auth(private)
