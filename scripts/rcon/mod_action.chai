@@ -1,5 +1,6 @@
-import("re")
+// scripts/rcon/mod_action.chai
 
+import("re")
 
 def trim(str) {
 	var start = 0
