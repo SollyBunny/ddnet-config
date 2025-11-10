@@ -52,7 +52,7 @@ if (community == "ddnet") {
 } else if (community != "") {
 	auth(community)
 } else {
-	auth(private)
+	auth("private")
 }
 
 exec("exec scripts/rcon/autoexec.cfg")
