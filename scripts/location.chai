@@ -1,0 +1,24 @@
+var location = state("location")
+var msg
+if (location == "NW") {
+	msg = "[↖] Top Left / Oeberen Links / верхней левой"
+} else if (location == "N") {
+	msg = "[↑] Top / Oberen / верхней"
+} else if (location == "NE") {
+	msg = "[↗] Top Right / Oben Rechts / верхней правой"
+} else if (location == "W") {
+	msg = "[←] Left / Linken / левой"
+} else if (location == "C") {
+	msg = "[⊙] Center / Mittleren / центральной"
+} else if (location == "E") {
+	msg = "[→] Right / Rechten / правой"
+} else if (location == "SW") {
+	msg = "[↙] Bottom Left / Unteren Linken / нижней левой"
+} else if (location == "S") {
+	msg = "[↓] Bottom / Unteren / нижней"
+} else if (location == "SE") {
+	msg = "[↘] Bottom Right / Unteren rechten / нижней правой"
+} else {
+	raise("Invalid location")
+}
+exec("say " + msg)

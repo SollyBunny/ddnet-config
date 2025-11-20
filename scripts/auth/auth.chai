@@ -1,0 +1,58 @@
+// scripts/auth/auth.chai
+// `tc_execute_on_connect chai scripts/auth/auth.chai`
+// `tc_execute_on_join chai scripts/auth/auth.chai`
+// `bind l chai scripts/auth/auth.chai`
+// place authentication in scripts/auth/<community>.secret.cfg
+// you can put passwords here aswell (for joining or mod slot)
+
+var community = state("community")
+
+exec("password \"\"")
+
+def auth(community) {
+	var cfg = "scripts/auth/" + community + ".secret.cfg"
+	var chai = "scripts/auth/" + community + ".secret.chai"
+	if (file_exists(cfg)) {
+		exec("exec " + cfg)
+	} else if (file_exists(chai)) {
+		exec("chai " + chai)
+	} else {
+		throw("No auth for community " + community)
+	}
+}
+
+print(community)
+
+if (community == "ddnet") {
+	var game_mode = state("game_mode")
+	if (game_mode == "fng" || game_mode == "fng2") {
+		auth("ddnetfng");
+	} else if (game_mode == "zCatch/TeeVi") {
+		auth("ddnetzcatch");
+	} else if (game_mode == "xPanic") {
+		auth("ddnetxpanic");
+	} else if (false ||
+		game_mode == "DM" ||
+		game_mode == "CTF" ||
+		game_mode == "TD" ||
+		game_mode == "TDM" ||
+		game_mode == "LMS" ||
+		game_mode == "LTS"
+	) {
+		auth("ddnetvanilla");
+	} else if (game_mode == "TSmash") {
+		auth("ddnettsmash");
+	} else if (game_mode == "blockZ") {
+		auth("ddnetblockz");
+	} else if (game_mode == "iCTF+") {
+		auth("ddnetictfp");
+	} else {
+		auth("ddnet");
+	}
+} else if (community != "") {
+	auth(community)
+} else {
+	auth("private")
+}
+
+exec("exec scripts/rcon/autoexec.cfg")
